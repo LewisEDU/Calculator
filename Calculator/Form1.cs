@@ -7,14 +7,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using org.mariuszgromada.math.mxparser;
 namespace Calculator
 {
     public partial class Form1 : Form
     {
+        public static String calc;
+        public static Boolean startedExpression;
+        public static Boolean isDecimal;
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private double Calculate()
+        {
+            Expression e = new Expression(calc);
+            return e.calculate();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -22,19 +31,59 @@ namespace Calculator
 
         }
 
-        private void rdoGrads_CheckedChanged(object sender, EventArgs e)
+        private void Number_Expression(object sender, EventArgs e)
         {
-
+            if (sender.GetType() == typeof(Button) ) {
+                Button b = (Button)sender;
+                calc += b.Text;
+                txtUi.Text += b.Text;
+                startedExpression = false;
+            }           
         }
 
-        private void rdoRadians_CheckedChanged(object sender, EventArgs e)
+        private void btnDec_Click(object sender, EventArgs e)
         {
-
+            if (sender.GetType() == typeof(Button) && isDecimal == false)
+            {
+                Button b = (Button)sender;
+                calc += b.Text;
+                txtUi.Text += b.Text;
+                isDecimal = true;
+            }
         }
 
-        private void rdoDeg_CheckedChanged(object sender, EventArgs e)
+        private void Basic_Expression(object sender, EventArgs e)
         {
+            if (sender.GetType() == typeof(Button) && txtUi.Text != "" && startedExpression != true)
+            {
+                Button b = (Button)sender;
+                calc += b.Text;
+                txtUi.Text += b.Text;
+                isDecimal = true;
+                startedExpression = true;
+            }
+        }
 
+        private void btnEquals_Click(object sender, EventArgs e)
+        {
+            isDecimal = false;
+            String answer = Convert.ToString(Calculate());
+            txtAnswer.Text = answer;
+            txtUi.Text = answer;
+            calc = answer;
+            startedExpression = false;
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            calc = "";
+            txtAnswer.Text = "";
+            txtUi.Text = "";
+        }
+
+        private void btnC_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }
