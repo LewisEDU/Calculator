@@ -16,5 +16,25 @@ namespace Calculator
         {
             InitializeComponent();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rdoGrads_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rdoRadians_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rdoDeg_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
