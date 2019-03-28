@@ -66,12 +66,26 @@ namespace Calculator
 
         private void btnEquals_Click(object sender, EventArgs e)
         {
-            isDecimal = false;
-            String answer = Convert.ToString(Calculate());
-            txtAnswer.Text = answer;
-            txtUi.Text = answer;
-            calc = answer;
-            startedExpression = false;
+            if (startedExpression.Equals(false)) {
+                isDecimal = false;
+                String answer = Convert.ToString(Calculate());
+                calc = answer;
+
+                if (answer == "NaN")
+                {
+                    answer = "Invalid Expression";
+                    calc = "";
+                }
+                else {
+                    txtUi.Text = answer;
+                }
+                
+                txtHistory.Text += txtUi.Text + "=";
+                txtAnswer.Text = answer;
+                
+                startedExpression = false;
+                txtHistory.Text += answer + "\r\n";
+            }     
         }
 
         private void btnClear_Click(object sender, EventArgs e)
