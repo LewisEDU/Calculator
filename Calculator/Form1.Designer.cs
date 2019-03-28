@@ -1,6 +1,6 @@
 ﻿namespace Calculator
 {
-    partial class Form1
+    partial class Calculator
     {
         /// <summary>
         /// Required designer variable.
@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Calculator));
             this.txtUi = new System.Windows.Forms.TextBox();
             this.txtHistory = new System.Windows.Forms.TextBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
@@ -35,27 +36,27 @@
             this.rdoDeg = new System.Windows.Forms.RadioButton();
             this.rdoGrads = new System.Windows.Forms.RadioButton();
             this.rdoRadians = new System.Windows.Forms.RadioButton();
-            this.btn9 = new System.Windows.Forms.Button();
-            this.btn8 = new System.Windows.Forms.Button();
             this.btn7 = new System.Windows.Forms.Button();
+            this.btn8 = new System.Windows.Forms.Button();
+            this.btn9 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.btn6 = new System.Windows.Forms.Button();
-            this.btn5 = new System.Windows.Forms.Button();
             this.btn4 = new System.Windows.Forms.Button();
+            this.btn5 = new System.Windows.Forms.Button();
+            this.btn6 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.btn3 = new System.Windows.Forms.Button();
-            this.btn2 = new System.Windows.Forms.Button();
             this.btn1 = new System.Windows.Forms.Button();
-            this.btnDec = new System.Windows.Forms.Button();
-            this.btn0 = new System.Windows.Forms.Button();
-            this.btnEquals = new System.Windows.Forms.Button();
+            this.btn2 = new System.Windows.Forms.Button();
+            this.btn3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.btn0 = new System.Windows.Forms.Button();
+            this.btnDec = new System.Windows.Forms.Button();
+            this.btnEquals = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnLeftBrac = new System.Windows.Forms.Button();
             this.btnRightBrac = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
             this.btnC = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.button8 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
@@ -101,30 +102,26 @@
             // 
             this.flowLayoutPanel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.flowLayoutPanel1.Controls.Add(this.groupBox2);
-            this.flowLayoutPanel1.Controls.Add(this.btn9);
-            this.flowLayoutPanel1.Controls.Add(this.btn8);
             this.flowLayoutPanel1.Controls.Add(this.btn7);
+            this.flowLayoutPanel1.Controls.Add(this.btn8);
+            this.flowLayoutPanel1.Controls.Add(this.btn9);
             this.flowLayoutPanel1.Controls.Add(this.button3);
-            this.flowLayoutPanel1.Controls.Add(this.btn6);
-            this.flowLayoutPanel1.Controls.Add(this.btn5);
             this.flowLayoutPanel1.Controls.Add(this.btn4);
+            this.flowLayoutPanel1.Controls.Add(this.btn5);
+            this.flowLayoutPanel1.Controls.Add(this.btn6);
             this.flowLayoutPanel1.Controls.Add(this.button4);
-            this.flowLayoutPanel1.Controls.Add(this.btn3);
-            this.flowLayoutPanel1.Controls.Add(this.btn2);
             this.flowLayoutPanel1.Controls.Add(this.btn1);
-            this.flowLayoutPanel1.Controls.Add(this.btnDec);
-            this.flowLayoutPanel1.Controls.Add(this.btn0);
-            this.flowLayoutPanel1.Controls.Add(this.btnEquals);
+            this.flowLayoutPanel1.Controls.Add(this.btn2);
+            this.flowLayoutPanel1.Controls.Add(this.btn3);
             this.flowLayoutPanel1.Controls.Add(this.button2);
+            this.flowLayoutPanel1.Controls.Add(this.btn0);
+            this.flowLayoutPanel1.Controls.Add(this.btnDec);
+            this.flowLayoutPanel1.Controls.Add(this.btnEquals);
             this.flowLayoutPanel1.Controls.Add(this.button1);
-            this.flowLayoutPanel1.Controls.Add(this.btnLeftBrac);
-            this.flowLayoutPanel1.Controls.Add(this.btnRightBrac);
-            this.flowLayoutPanel1.Controls.Add(this.btnClear);
-            this.flowLayoutPanel1.Controls.Add(this.btnC);
             this.flowLayoutPanel1.Controls.Add(this.groupBox1);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(12, 35);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(225, 331);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(225, 338);
             this.flowLayoutPanel1.TabIndex = 12;
             // 
             // groupBox2
@@ -172,16 +169,16 @@
             this.rdoRadians.Text = "Radians";
             this.rdoRadians.UseVisualStyleBackColor = true;
             // 
-            // btn9
+            // btn7
             // 
-            this.btn9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btn9.Location = new System.Drawing.Point(3, 56);
-            this.btn9.Name = "btn9";
-            this.btn9.Size = new System.Drawing.Size(50, 50);
-            this.btn9.TabIndex = 24;
-            this.btn9.Text = "9";
-            this.btn9.UseVisualStyleBackColor = true;
-            this.btn9.Click += new System.EventHandler(this.Number_Expression);
+            this.btn7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btn7.Location = new System.Drawing.Point(3, 56);
+            this.btn7.Name = "btn7";
+            this.btn7.Size = new System.Drawing.Size(50, 50);
+            this.btn7.TabIndex = 22;
+            this.btn7.Text = "7";
+            this.btn7.UseVisualStyleBackColor = true;
+            this.btn7.Click += new System.EventHandler(this.Number_Expression);
             // 
             // btn8
             // 
@@ -194,16 +191,16 @@
             this.btn8.UseVisualStyleBackColor = true;
             this.btn8.Click += new System.EventHandler(this.Number_Expression);
             // 
-            // btn7
+            // btn9
             // 
-            this.btn7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btn7.Location = new System.Drawing.Point(115, 56);
-            this.btn7.Name = "btn7";
-            this.btn7.Size = new System.Drawing.Size(50, 50);
-            this.btn7.TabIndex = 22;
-            this.btn7.Text = "7";
-            this.btn7.UseVisualStyleBackColor = true;
-            this.btn7.Click += new System.EventHandler(this.Number_Expression);
+            this.btn9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btn9.Location = new System.Drawing.Point(115, 56);
+            this.btn9.Name = "btn9";
+            this.btn9.Size = new System.Drawing.Size(50, 50);
+            this.btn9.TabIndex = 24;
+            this.btn9.Text = "9";
+            this.btn9.UseVisualStyleBackColor = true;
+            this.btn9.Click += new System.EventHandler(this.Number_Expression);
             // 
             // button3
             // 
@@ -216,16 +213,16 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.Basic_Expression);
             // 
-            // btn6
+            // btn4
             // 
-            this.btn6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btn6.Location = new System.Drawing.Point(3, 112);
-            this.btn6.Name = "btn6";
-            this.btn6.Size = new System.Drawing.Size(50, 50);
-            this.btn6.TabIndex = 21;
-            this.btn6.Text = "6";
-            this.btn6.UseVisualStyleBackColor = true;
-            this.btn6.Click += new System.EventHandler(this.Number_Expression);
+            this.btn4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btn4.Location = new System.Drawing.Point(3, 112);
+            this.btn4.Name = "btn4";
+            this.btn4.Size = new System.Drawing.Size(50, 50);
+            this.btn4.TabIndex = 19;
+            this.btn4.Text = "4";
+            this.btn4.UseVisualStyleBackColor = true;
+            this.btn4.Click += new System.EventHandler(this.Number_Expression);
             // 
             // btn5
             // 
@@ -238,16 +235,16 @@
             this.btn5.UseVisualStyleBackColor = true;
             this.btn5.Click += new System.EventHandler(this.Number_Expression);
             // 
-            // btn4
+            // btn6
             // 
-            this.btn4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btn4.Location = new System.Drawing.Point(115, 112);
-            this.btn4.Name = "btn4";
-            this.btn4.Size = new System.Drawing.Size(50, 50);
-            this.btn4.TabIndex = 19;
-            this.btn4.Text = "4";
-            this.btn4.UseVisualStyleBackColor = true;
-            this.btn4.Click += new System.EventHandler(this.Number_Expression);
+            this.btn6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btn6.Location = new System.Drawing.Point(115, 112);
+            this.btn6.Name = "btn6";
+            this.btn6.Size = new System.Drawing.Size(50, 50);
+            this.btn6.TabIndex = 21;
+            this.btn6.Text = "6";
+            this.btn6.UseVisualStyleBackColor = true;
+            this.btn6.Click += new System.EventHandler(this.Number_Expression);
             // 
             // button4
             // 
@@ -260,16 +257,16 @@
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.Basic_Expression);
             // 
-            // btn3
+            // btn1
             // 
-            this.btn3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btn3.Location = new System.Drawing.Point(3, 168);
-            this.btn3.Name = "btn3";
-            this.btn3.Size = new System.Drawing.Size(50, 50);
-            this.btn3.TabIndex = 18;
-            this.btn3.Text = "3";
-            this.btn3.UseVisualStyleBackColor = true;
-            this.btn3.Click += new System.EventHandler(this.Number_Expression);
+            this.btn1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btn1.Location = new System.Drawing.Point(3, 168);
+            this.btn1.Name = "btn1";
+            this.btn1.Size = new System.Drawing.Size(50, 50);
+            this.btn1.TabIndex = 16;
+            this.btn1.Text = "1";
+            this.btn1.UseVisualStyleBackColor = true;
+            this.btn1.Click += new System.EventHandler(this.Number_Expression);
             // 
             // btn2
             // 
@@ -282,27 +279,27 @@
             this.btn2.UseVisualStyleBackColor = true;
             this.btn2.Click += new System.EventHandler(this.Number_Expression);
             // 
-            // btn1
+            // btn3
             // 
-            this.btn1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btn1.Location = new System.Drawing.Point(115, 168);
-            this.btn1.Name = "btn1";
-            this.btn1.Size = new System.Drawing.Size(50, 50);
-            this.btn1.TabIndex = 16;
-            this.btn1.Text = "1";
-            this.btn1.UseVisualStyleBackColor = true;
-            this.btn1.Click += new System.EventHandler(this.Number_Expression);
+            this.btn3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btn3.Location = new System.Drawing.Point(115, 168);
+            this.btn3.Name = "btn3";
+            this.btn3.Size = new System.Drawing.Size(50, 50);
+            this.btn3.TabIndex = 18;
+            this.btn3.Text = "3";
+            this.btn3.UseVisualStyleBackColor = true;
+            this.btn3.Click += new System.EventHandler(this.Number_Expression);
             // 
-            // btnDec
+            // button2
             // 
-            this.btnDec.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnDec.Location = new System.Drawing.Point(171, 168);
-            this.btnDec.Name = "btnDec";
-            this.btnDec.Size = new System.Drawing.Size(50, 50);
-            this.btnDec.TabIndex = 28;
-            this.btnDec.Text = ".";
-            this.btnDec.UseVisualStyleBackColor = true;
-            this.btnDec.Click += new System.EventHandler(this.Basic_Expression);
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.button2.Location = new System.Drawing.Point(171, 168);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(50, 50);
+            this.button2.TabIndex = 40;
+            this.button2.Text = "*";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.Basic_Expression);
             // 
             // btn0
             // 
@@ -315,27 +312,27 @@
             this.btn0.UseVisualStyleBackColor = true;
             this.btn0.Click += new System.EventHandler(this.Number_Expression);
             // 
+            // btnDec
+            // 
+            this.btnDec.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btnDec.Location = new System.Drawing.Point(59, 224);
+            this.btnDec.Name = "btnDec";
+            this.btnDec.Size = new System.Drawing.Size(50, 50);
+            this.btnDec.TabIndex = 28;
+            this.btnDec.Text = ".";
+            this.btnDec.UseVisualStyleBackColor = true;
+            this.btnDec.Click += new System.EventHandler(this.btnDec_Click);
+            // 
             // btnEquals
             // 
             this.btnEquals.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnEquals.Location = new System.Drawing.Point(59, 224);
+            this.btnEquals.Location = new System.Drawing.Point(115, 224);
             this.btnEquals.Name = "btnEquals";
             this.btnEquals.Size = new System.Drawing.Size(50, 50);
             this.btnEquals.TabIndex = 42;
             this.btnEquals.Text = "=";
             this.btnEquals.UseVisualStyleBackColor = true;
             this.btnEquals.Click += new System.EventHandler(this.btnEquals_Click);
-            // 
-            // button2
-            // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.button2.Location = new System.Drawing.Point(115, 224);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(50, 50);
-            this.button2.TabIndex = 40;
-            this.button2.Text = "*";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.Basic_Expression);
             // 
             // button1
             // 
@@ -348,10 +345,21 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.Basic_Expression);
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.groupBox1.Location = new System.Drawing.Point(3, 280);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(519, 0);
+            this.groupBox1.TabIndex = 0;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "groupBox1";
+            // 
             // btnLeftBrac
             // 
             this.btnLeftBrac.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnLeftBrac.Location = new System.Drawing.Point(3, 280);
+            this.btnLeftBrac.Location = new System.Drawing.Point(115, 227);
             this.btnLeftBrac.Name = "btnLeftBrac";
             this.btnLeftBrac.Size = new System.Drawing.Size(50, 50);
             this.btnLeftBrac.TabIndex = 25;
@@ -362,7 +370,7 @@
             // btnRightBrac
             // 
             this.btnRightBrac.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnRightBrac.Location = new System.Drawing.Point(59, 280);
+            this.btnRightBrac.Location = new System.Drawing.Point(171, 227);
             this.btnRightBrac.Name = "btnRightBrac";
             this.btnRightBrac.Size = new System.Drawing.Size(50, 50);
             this.btnRightBrac.TabIndex = 26;
@@ -373,7 +381,7 @@
             // btnClear
             // 
             this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnClear.Location = new System.Drawing.Point(115, 280);
+            this.btnClear.Location = new System.Drawing.Point(59, 283);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(50, 50);
             this.btnClear.TabIndex = 44;
@@ -384,24 +392,13 @@
             // btnC
             // 
             this.btnC.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnC.Location = new System.Drawing.Point(171, 280);
+            this.btnC.Location = new System.Drawing.Point(3, 283);
             this.btnC.Name = "btnC";
             this.btnC.Size = new System.Drawing.Size(50, 50);
             this.btnC.TabIndex = 45;
             this.btnC.Text = "C";
             this.btnC.UseVisualStyleBackColor = true;
             this.btnC.Click += new System.EventHandler(this.btnC_Click);
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.groupBox1.Location = new System.Drawing.Point(3, 336);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(519, 0);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
             // 
             // flowLayoutPanel2
             // 
@@ -423,9 +420,13 @@
             this.flowLayoutPanel2.Controls.Add(this.button23);
             this.flowLayoutPanel2.Controls.Add(this.button24);
             this.flowLayoutPanel2.Controls.Add(this.button25);
+            this.flowLayoutPanel2.Controls.Add(this.btnLeftBrac);
+            this.flowLayoutPanel2.Controls.Add(this.btnRightBrac);
+            this.flowLayoutPanel2.Controls.Add(this.btnC);
+            this.flowLayoutPanel2.Controls.Add(this.btnClear);
             this.flowLayoutPanel2.Location = new System.Drawing.Point(243, 35);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(226, 330);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(226, 338);
             this.flowLayoutPanel2.TabIndex = 13;
             // 
             // button8
@@ -617,17 +618,18 @@
             this.txtAnswer.Size = new System.Drawing.Size(187, 26);
             this.txtAnswer.TabIndex = 14;
             // 
-            // Form1
+            // Calculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(662, 369);
+            this.ClientSize = new System.Drawing.Size(662, 385);
             this.Controls.Add(this.txtAnswer);
             this.Controls.Add(this.flowLayoutPanel2);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.txtHistory);
             this.Controls.Add(this.txtUi);
-            this.Name = "Form1";
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "Calculator";
             this.Text = "Calculator";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.flowLayoutPanel1.ResumeLayout(false);
