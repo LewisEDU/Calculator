@@ -10,12 +10,12 @@ using System.Windows.Forms;
 using org.mariuszgromada.math.mxparser;
 namespace Calculator
 {
-    public partial class Form1 : Form
+    public partial class Calculator : Form
     {
         public static String calc;
         public static Boolean startedExpression;
-        public static Boolean isDecimal;
-        public Form1()
+        private int decCount = 0;
+        public Calculator()
         {
             InitializeComponent();
         }
@@ -43,12 +43,12 @@ namespace Calculator
 
         private void btnDec_Click(object sender, EventArgs e)
         {
-            if (sender.GetType() == typeof(Button) && isDecimal == false)
+            if (sender.GetType() == typeof(Button) && decCount < 1)
             {
                 Button b = (Button)sender;
                 calc += b.Text;
                 txtUi.Text += b.Text;
-                isDecimal = true;
+                decCount++;
             }
         }
 
@@ -59,19 +59,32 @@ namespace Calculator
                 Button b = (Button)sender;
                 calc += b.Text;
                 txtUi.Text += b.Text;
-                isDecimal = true;
-                startedExpression = true;
+                decCount = 0;
             }
         }
 
         private void btnEquals_Click(object sender, EventArgs e)
         {
-            isDecimal = false;
-            String answer = Convert.ToString(Calculate());
-            txtAnswer.Text = answer;
-            txtUi.Text = answer;
-            calc = answer;
-            startedExpression = false;
+            if (startedExpression.Equals(false)) {
+                
+                String answer = Convert.ToString(Calculate());
+                calc = answer;
+
+                if (answer == "NaN")
+                {
+                    answer = "Invalid Expression";
+                    calc = "";
+                }
+                else {
+                    txtHistory.Text += txtUi.Text + "=";
+                    txtUi.Text = answer;
+                }
+                
+                
+                txtAnswer.Text = answer;
+                startedExpression = false;
+                txtHistory.Text += answer + "\r\n";
+            }     
         }
 
         private void btnClear_Click(object sender, EventArgs e)
@@ -79,6 +92,7 @@ namespace Calculator
             calc = "";
             txtAnswer.Text = "";
             txtUi.Text = "";
+            decCount = 0;
         }
 
         private void btnC_Click(object sender, EventArgs e)
