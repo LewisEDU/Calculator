@@ -85,5 +85,15 @@ namespace Calculator
         {
             
         }
+
+        private void btnSin_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button19_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
