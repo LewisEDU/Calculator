@@ -12,7 +12,8 @@ namespace Calculator
 {
     public partial class Calculator : Form
     {
-        public static String calc;
+        public static String calc = "";
+        static double mem = 0;
         public static Boolean startedExpression;
         private int decCount = 0;
         public Calculator()
@@ -60,31 +61,34 @@ namespace Calculator
                 calc += b.Text;
                 txtUi.Text += b.Text;
                 decCount = 0;
+                startedExpression = true;
             }
         }
 
         private void btnEquals_Click(object sender, EventArgs e)
         {
-            if (startedExpression.Equals(false)) {
-                
+            if (startedExpression.Equals(false) && calc != "")
+            {
+
                 String answer = Convert.ToString(Calculate());
                 calc = answer;
 
-                if (answer == "NaN")
+                if (answer.ToString() == "NaN")
                 {
                     answer = "Invalid Expression";
                     calc = "";
                 }
-                else {
+                else
+                {
                     txtHistory.Text += txtUi.Text + "=";
                     txtUi.Text = answer;
                 }
-                
-                
+
+
                 txtAnswer.Text = answer;
                 startedExpression = false;
                 txtHistory.Text += answer + "\r\n";
-            }     
+            }
         }
 
         private void btnClear_Click(object sender, EventArgs e)
@@ -97,7 +101,8 @@ namespace Calculator
 
         private void btnC_Click(object sender, EventArgs e)
         {
-            
+            calc = "";
+            txtUi.Text = "";
         }
 
         private void btnSin_Click(object sender, EventArgs e)
@@ -108,6 +113,100 @@ namespace Calculator
         private void button19_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void flowLayoutPanel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button23_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void memplus_Click(object sender, EventArgs e)
+        {
+            if (startedExpression.Equals(false) && mem != 0)
+            {
+
+                double answer = Calculate();  
+                answer += mem;
+                String answerText = answer.ToString();
+                calc = answerText;
+
+                if (answer.ToString() == "NaN")
+                {
+                    answerText = "Invalid Expression";
+                    calc = "";
+                }
+                else
+                {
+                    txtHistory.Text += txtUi.Text + " + " + mem.ToString() + "=";
+                    txtUi.Text = answerText;
+                }
+
+                txtAnswer.Text = answerText;
+                startedExpression = false;
+                txtHistory.Text += answer + "\r\n";
+            }
+        }
+
+        private void btnMemMinus_Click(object sender, EventArgs e)
+        {
+            if (startedExpression.Equals(false) && mem != 0)
+            {
+
+                double answer = Calculate();
+                answer -= mem;
+                String answerText = answer.ToString();
+                calc = answerText;
+
+                if (answer.ToString() == "NaN")
+                {
+                    answerText = "Invalid Expression";
+                    calc = "";
+                }
+                else
+                {
+                    txtHistory.Text += txtUi.Text + " - " + mem.ToString() +  "=";
+                    txtUi.Text = answerText;
+                }
+
+                txtAnswer.Text = answerText;
+                startedExpression = false;
+                txtHistory.Text += answer + "\r\n";
+            }
+        }
+
+        private void btnMemSet_Click(object sender, EventArgs e)
+        {
+            if (startedExpression.Equals(false))
+            {
+                mem = Calculate();
+            }
+        }
+
+        private void btnMemClear_Click(object sender, EventArgs e)
+        {
+            mem = 0;
+        }
+
+        private void button24_Click(object sender, EventArgs e)
+        {
+            txtUi.Text = Convert.ToString(mem);
+            calc = Convert.ToString(mem);
+        }
+
+        private void btnSinh_Click(object sender, EventArgs e)
+        {
+            if (startedExpression.Equals(false))
+            {
+
+                double answer = Calculate();
+                txtUi.Text = "sinh(" + answer.ToString() + ")";
+                calc = "sinh(" + answer.ToString() + ")";
+            }
         }
     }
 }
