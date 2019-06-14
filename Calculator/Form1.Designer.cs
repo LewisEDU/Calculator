@@ -61,7 +61,7 @@
             this.btnMemSet = new System.Windows.Forms.Button();
             this.btnSinh = new System.Windows.Forms.Button();
             this.btnSin = new System.Windows.Forms.Button();
-            this.btnSquare = new System.Windows.Forms.Button();
+            this.btnMod = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
             this.button13 = new System.Windows.Forms.Button();
@@ -198,7 +198,7 @@
             // btn4
             // 
             this.btn4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btn4.Location = new System.Drawing.Point(60, 194);
+            this.btn4.Location = new System.Drawing.Point(116, 193);
             this.btn4.Name = "btn4";
             this.btn4.Size = new System.Drawing.Size(50, 50);
             this.btn4.TabIndex = 50;
@@ -209,7 +209,7 @@
             // btn5
             // 
             this.btn5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btn5.Location = new System.Drawing.Point(116, 194);
+            this.btn5.Location = new System.Drawing.Point(60, 193);
             this.btn5.Name = "btn5";
             this.btn5.Size = new System.Drawing.Size(50, 50);
             this.btn5.TabIndex = 51;
@@ -425,15 +425,16 @@
             this.btnSin.Text = "Exp";
             this.btnSin.UseVisualStyleBackColor = true;
             // 
-            // btnSquare
+            // btnMod
             // 
-            this.btnSquare.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnSquare.Location = new System.Drawing.Point(405, 138);
-            this.btnSquare.Name = "btnSquare";
-            this.btnSquare.Size = new System.Drawing.Size(50, 50);
-            this.btnSquare.TabIndex = 67;
-            this.btnSquare.Text = "Mod";
-            this.btnSquare.UseVisualStyleBackColor = true;
+            this.btnMod.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btnMod.Location = new System.Drawing.Point(405, 138);
+            this.btnMod.Name = "btnMod";
+            this.btnMod.Size = new System.Drawing.Size(50, 50);
+            this.btnMod.TabIndex = 67;
+            this.btnMod.Text = "Mod";
+            this.btnMod.UseVisualStyleBackColor = true;
+            this.btnMod.Click += new System.EventHandler(this.btnMod_Click);
             // 
             // button11
             // 
@@ -444,6 +445,7 @@
             this.button11.TabIndex = 68;
             this.button11.Text = "Log";
             this.button11.UseVisualStyleBackColor = true;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
             // button12
             // 
@@ -452,8 +454,9 @@
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(50, 50);
             this.button12.TabIndex = 69;
-            this.button12.Text = "!n";
+            this.button12.Text = "!";
             this.button12.UseVisualStyleBackColor = true;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
             // button13
             // 
@@ -464,6 +467,7 @@
             this.button13.TabIndex = 70;
             this.button13.Text = "√x";
             this.button13.UseVisualStyleBackColor = true;
+            this.button13.Click += new System.EventHandler(this.button13_Click);
             // 
             // button14
             // 
@@ -474,6 +478,7 @@
             this.button14.TabIndex = 71;
             this.button14.Text = "3√x";
             this.button14.UseVisualStyleBackColor = true;
+            this.button14.Click += new System.EventHandler(this.button14_Click);
             // 
             // button15
             // 
@@ -484,6 +489,7 @@
             this.button15.TabIndex = 72;
             this.button15.Text = "10^x";
             this.button15.UseVisualStyleBackColor = true;
+            this.button15.Click += new System.EventHandler(this.button15_Click);
             // 
             // button16
             // 
@@ -494,6 +500,7 @@
             this.button16.TabIndex = 73;
             this.button16.Text = "x^2";
             this.button16.UseVisualStyleBackColor = true;
+            this.button16.Click += new System.EventHandler(this.button16_Click);
             // 
             // button17
             // 
@@ -504,6 +511,7 @@
             this.button17.TabIndex = 74;
             this.button17.Text = "cosh";
             this.button17.UseVisualStyleBackColor = true;
+            this.button17.Click += new System.EventHandler(this.button17_Click);
             // 
             // button18
             // 
@@ -514,6 +522,7 @@
             this.button18.TabIndex = 75;
             this.button18.Text = "cos";
             this.button18.UseVisualStyleBackColor = true;
+            this.button18.Click += new System.EventHandler(this.button18_Click);
             // 
             // button19
             // 
@@ -524,6 +533,7 @@
             this.button19.TabIndex = 76;
             this.button19.Text = "x^y";
             this.button19.UseVisualStyleBackColor = true;
+            this.button19.Click += new System.EventHandler(this.button19_Click_1);
             // 
             // btnMPlus
             // 
@@ -545,6 +555,7 @@
             this.button20.TabIndex = 77;
             this.button20.Text = "sin";
             this.button20.UseVisualStyleBackColor = true;
+            this.button20.Click += new System.EventHandler(this.button20_Click);
             // 
             // button21
             // 
@@ -555,6 +566,7 @@
             this.button21.TabIndex = 78;
             this.button21.Text = "tanh";
             this.button21.UseVisualStyleBackColor = true;
+            this.button21.Click += new System.EventHandler(this.button21_Click);
             // 
             // button22
             // 
@@ -565,6 +577,7 @@
             this.button22.TabIndex = 79;
             this.button22.Text = "tan";
             this.button22.UseVisualStyleBackColor = true;
+            this.button22.Click += new System.EventHandler(this.button22_Click);
             // 
             // button23
             // 
@@ -601,7 +614,7 @@
             this.Controls.Add(this.btnMemSet);
             this.Controls.Add(this.btnSinh);
             this.Controls.Add(this.btnSin);
-            this.Controls.Add(this.btnSquare);
+            this.Controls.Add(this.btnMod);
             this.Controls.Add(this.button11);
             this.Controls.Add(this.button12);
             this.Controls.Add(this.button13);
@@ -682,7 +695,7 @@
         private System.Windows.Forms.Button btnMemSet;
         private System.Windows.Forms.Button btnSinh;
         private System.Windows.Forms.Button btnSin;
-        private System.Windows.Forms.Button btnSquare;
+        private System.Windows.Forms.Button btnMod;
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.Button button13;

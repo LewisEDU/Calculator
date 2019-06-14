@@ -29,7 +29,6 @@ namespace Calculator
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
         }
 
         private void Number_Expression(object sender, EventArgs e)
@@ -122,14 +121,17 @@ namespace Calculator
 
         private void button23_Click(object sender, EventArgs e)
         {
-
+            if (startedExpression.Equals(false) && calc != "")
+            {
+                txtUi.Text += "^3";
+                calc += "^3";
+            }
         }
 
         private void memplus_Click(object sender, EventArgs e)
         {
             if (startedExpression.Equals(false) && mem != 0)
             {
-
                 double answer = Calculate();  
                 answer += mem;
                 String answerText = answer.ToString();
@@ -156,7 +158,6 @@ namespace Calculator
         {
             if (startedExpression.Equals(false) && mem != 0)
             {
-
                 double answer = Calculate();
                 answer -= mem;
                 String answerText = answer.ToString();
@@ -202,10 +203,134 @@ namespace Calculator
         {
             if (startedExpression.Equals(false))
             {
-
                 double answer = Calculate();
                 txtUi.Text = "sinh(" + answer.ToString() + ")";
                 calc = "sinh(" + answer.ToString() + ")";
+            }
+        }
+
+        private void btnMod_Click(object sender, EventArgs e)
+        {
+            if(startedExpression != true) {
+                txtUi.Text += "%";
+                calc += "#";
+            }
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            if (startedExpression.Equals(false))
+            {
+                double answer = Calculate();
+                txtUi.Text = "log(" + answer.ToString() + ")";
+                calc = "log10(" + answer.ToString() + ")";
+            }
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            if (startedExpression.Equals(false) && calc != "") {
+                txtUi.Text += "!";
+                calc += "!";
+            }
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            if (startedExpression.Equals(false) && calc != "")
+            {
+                double answer = Calculate();
+                txtUi.Text = "√" + answer.ToString();
+                calc = "sqrt(" + answer.ToString() + ")";
+            }
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            if (startedExpression.Equals(false) && calc != "")
+            {
+                double answer = Calculate();
+                txtUi.Text = "3√" + answer.ToString();
+                calc = "root(3, " + answer.ToString() + ")";
+            }
+
+        }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+            if (startedExpression.Equals(false) && calc != "")
+            {
+                double answer = Calculate();
+                txtUi.Text = "10^" + answer.ToString();
+                calc = "10^" + answer.ToString();
+            }
+        }
+
+        private void button16_Click(object sender, EventArgs e)
+        {
+            if (startedExpression.Equals(false) && calc != "")
+            {
+                txtUi.Text += "^2";
+                calc += "^2";
+            }
+        }
+
+        private void button17_Click(object sender, EventArgs e)
+        {
+            if (startedExpression.Equals(false) && calc != "")
+            {
+                double answer = Calculate();
+                txtUi.Text = "cosh(" + answer.ToString() + ")";
+                calc = "cosh(" + answer.ToString() + ")";
+            }
+        }
+
+        private void button18_Click(object sender, EventArgs e)
+        {
+            if (startedExpression.Equals(false) && calc != "")
+            {
+                double answer = Calculate();
+                txtUi.Text = "cos(" + answer.ToString() + ")";
+                calc = "cos(" + answer.ToString() + ")";
+            }
+        }
+
+        private void button19_Click_1(object sender, EventArgs e)
+        {
+            if (startedExpression.Equals(false) && calc != "")
+            {
+                txtUi.Text += "^";
+                calc += "^";
+            }
+        }
+
+        private void button20_Click(object sender, EventArgs e)
+        {
+            if (startedExpression.Equals(false) && calc != "")
+            {
+                double answer = Calculate();
+                txtUi.Text = "sin(" + answer.ToString() + ")";
+                calc = "sin(" + answer.ToString() + ")";
+            }
+        }
+
+        private void button21_Click(object sender, EventArgs e)
+        {
+            if (startedExpression.Equals(false) && calc != "")
+            {
+                double answer = Calculate();
+                txtUi.Text = "tanh(" + answer.ToString() + ")";
+                calc = "tanh(" + answer.ToString() + ")";
+            }
+        }
+
+        private void button22_Click(object sender, EventArgs e)
+        {
+            if (startedExpression.Equals(false) && calc != "")
+            {
+                double answer = Calculate();
+                txtUi.Text = "tan(" + answer.ToString() + ")";
+                calc = "tan(" + answer.ToString() + ")";
             }
         }
     }
