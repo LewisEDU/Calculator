@@ -83,26 +83,31 @@
             // txtUi
             // 
             this.txtUi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtUi.Location = new System.Drawing.Point(4, 0);
+            this.txtUi.Location = new System.Drawing.Point(4, 1);
             this.txtUi.Name = "txtUi";
-            this.txtUi.Size = new System.Drawing.Size(507, 26);
+            this.txtUi.ReadOnly = true;
+            this.txtUi.Size = new System.Drawing.Size(508, 26);
             this.txtUi.TabIndex = 1;
             // 
             // txtHistory
             // 
+            this.txtHistory.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtHistory.Location = new System.Drawing.Point(517, 31);
             this.txtHistory.Multiline = true;
             this.txtHistory.Name = "txtHistory";
+            this.txtHistory.ReadOnly = true;
             this.txtHistory.Size = new System.Drawing.Size(128, 325);
             this.txtHistory.TabIndex = 2;
+            this.txtHistory.TabStop = false;
             this.txtHistory.UseSystemPasswordChar = true;
             // 
             // txtAnswer
             // 
             this.txtAnswer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtAnswer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtAnswer.Location = new System.Drawing.Point(517, 0);
+            this.txtAnswer.Location = new System.Drawing.Point(518, 1);
             this.txtAnswer.Name = "txtAnswer";
+            this.txtAnswer.ReadOnly = true;
             this.txtAnswer.Size = new System.Drawing.Size(128, 26);
             this.txtAnswer.TabIndex = 14;
             // 
@@ -128,6 +133,7 @@
             this.rdoDeg.TabStop = true;
             this.rdoDeg.Text = "Degrees";
             this.rdoDeg.UseVisualStyleBackColor = true;
+            this.rdoDeg.CheckedChanged += new System.EventHandler(this.rdoDeg_CheckedChanged);
             // 
             // rdoGrads
             // 
@@ -143,13 +149,14 @@
             // rdoRadians
             // 
             this.rdoRadians.AutoSize = true;
-            this.rdoRadians.Location = new System.Drawing.Point(112, 19);
+            this.rdoRadians.Location = new System.Drawing.Point(111, 19);
             this.rdoRadians.Name = "rdoRadians";
             this.rdoRadians.Size = new System.Drawing.Size(64, 17);
             this.rdoRadians.TabIndex = 26;
             this.rdoRadians.TabStop = true;
             this.rdoRadians.Text = "Radians";
             this.rdoRadians.UseVisualStyleBackColor = true;
+            this.rdoRadians.CheckedChanged += new System.EventHandler(this.rdoRadians_CheckedChanged);
             // 
             // btn7
             // 

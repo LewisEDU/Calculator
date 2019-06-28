@@ -29,6 +29,7 @@ namespace Calculator
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
         }
 
         private void Number_Expression(object sender, EventArgs e)
@@ -332,6 +333,23 @@ namespace Calculator
                 txtUi.Text = "tan(" + answer.ToString() + ")";
                 calc = "tan(" + answer.ToString() + ")";
             }
+        }
+
+        private void rdoDeg_CheckedChanged(object sender, EventArgs e)
+        {
+            mXparser.setDegreesMode();
+            double answer = Calculate();
+            txtUi.Text = answer.ToString();
+            calc = answer.ToString();
+            
+        }
+
+        private void rdoRadians_CheckedChanged(object sender, EventArgs e)
+        {
+            mXparser.setRadiansMode();
+            double answer = Calculate();
+            txtUi.Text = answer.ToString();
+            calc = answer.ToString();
         }
     }
 }
